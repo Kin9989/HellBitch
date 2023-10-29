@@ -136,7 +136,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section  className="section-homepage" style={{ background: '#18164c' }} >
+      {/* <section  className="section-homepage" style={{ background: '#18164c' }} >
         <div className="container reveal" >
           <h4 className="text-center p-3 mt-5 mb-5 display-4 jumbotron " style={{ color: 'white' }}>
             Đối tác chiến lược
@@ -148,7 +148,7 @@ const Home = () => {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       <br />
       {/* <SpeedDial></SpeedDial> */}
