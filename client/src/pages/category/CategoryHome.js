@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getCategory } from "../../functions/category";
-import ProductCard from "../../components/cards/ProductCard";
+import ProductCardv2 from "../../components/cards/ProductCardv2/ProductCardv2";
 
 const CategoryHome = ({ match }) => {
   const [category, setCategory] = useState({});
@@ -38,7 +38,7 @@ const CategoryHome = ({ match }) => {
       <div className="row">
         {products.map((p) => (
           <div className="col" key={p._id}>
-            <ProductCard product={p} />
+            <ProductCardv2 product={p} />
           </div>
         ))}
       </div>

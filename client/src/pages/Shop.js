@@ -6,7 +6,7 @@ import {
 import { getCategories } from "../functions/category";
 import { getSubs } from "../functions/sub";
 import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "../components/cards/ProductCard";
+import ProductCardv2 from "../components/cards/ProductCardv2/ProductCardv2";
 import { Menu, Slider, Checkbox, Radio } from "antd";
 import {
   DollarOutlined,
@@ -437,7 +437,7 @@ const Shop = () => {
           <div className="row pb-5">
             {products.map((p) => (
               <div key={p._id} className="col-md-4 mt-3">
-                <ProductCard product={p} />
+                <ProductCardv2 product={p} />
               </div>
             ))}
           </div>

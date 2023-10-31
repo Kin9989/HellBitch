@@ -1,11 +1,14 @@
 import React from "react";
 import { Button, Form, Input, Select } from 'antd';
-
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/uploadadapter';
 const { Option } = Select;
 
 const ProductCreateForm = ({
   handleSubmit,
   handleChange,
+
   setValues,
   values,
   handleCatagoryChange,
@@ -38,6 +41,16 @@ const ProductCreateForm = ({
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+
+  const handleEditorChange = (event, editor) => {
+    const data = editor.getData();
+    handleChange('description', data);
+
+  };
+  // const editorConfiguration = {
+  //   plugins: [UploadAdapter],
+  //   // other CKEditor configuration options
+  // };
   return (
     <Form
       name="basic"
@@ -73,7 +86,7 @@ const ProductCreateForm = ({
       </Form.Item>
 
 
-      <Form.Item
+      {/* <Form.Item
         label="Mô tả cho sản phẩm"
         name="description"
         rules={[
@@ -86,6 +99,24 @@ const ProductCreateForm = ({
         <Input
           value={description}
           onChange={(e) => handleChange('description', e.target.value)}
+        />
+      </Form.Item> */}
+
+      <Form.Item
+        label="Mô tả cho sản phẩm"
+        name="description"
+        rules={[
+          {
+            required: true,
+            message: "Vui lòng nhập mô tả cho sản phẩm!",
+          },
+        ]}
+      >
+        <CKEditor
+          editor={ClassicEditor}
+          // config={editorConfiguration}
+          data={description}
+          onChange={handleEditorChange}
         />
       </Form.Item>
 
