@@ -69,6 +69,19 @@
 
   <!-- Your SDK code -->
   <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      // Get the chatbox element
+      var chatbox = document.getElementById('fb-customer-chat');
+
+      // Set the page_id and attribution attributes
+      chatbox.setAttribute("page_id", "132655243267105");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      // Trigger a click event to open the chatbox
+      setTimeout(function () {
+        chatbox.click();
+      }, 2000); // Adjust the delay as needed
+    });
     window.fbAsyncInit = function () {
       FB.init({
         xfbml: true,
@@ -84,6 +97,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+
 </body>
 
 </html>
