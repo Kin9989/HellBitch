@@ -10,6 +10,7 @@ import ProductUpdateForm from "../../../components/forms/ProductUpdateForm";
 import { getBrands } from "../../../functions/brand";
 import { getColors } from "../../../functions/color";
 
+
 const initialState = {
   title: "",
   description: "",
@@ -23,6 +24,9 @@ const initialState = {
   brands: [],
   color: "",
   brand: "",
+  status: "",
+  Guarantee: "",
+  Origin: "",
 };
 
 const ProductUpdate = ({ match, history }) => {
@@ -60,7 +64,7 @@ const ProductUpdate = ({ match, history }) => {
       setArrayOfSubs((prev) => arr);
     });
   };
-  
+
   const loadCategories = () =>
     getCategories().then((c) => {
       console.log("GET CATEGORIES IN UPDATE PRODUCT", c.data);

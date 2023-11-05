@@ -3,6 +3,7 @@ import { Button, Form, Input, Select } from 'antd';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 // import UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/uploadadapter';
+
 const { Option } = Select;
 
 const ProductCreateForm = ({
@@ -32,6 +33,9 @@ const ProductCreateForm = ({
     brands,
     color,
     brand,
+    status,
+    Guarantee,
+    Origin,
   } = values;
   const onFinish = async () => {
     await handleSubmit();
@@ -84,6 +88,56 @@ const ProductCreateForm = ({
           onChange={(e) => handleChange('title', e.target.value)}
         />
       </Form.Item>
+
+      <Form.Item
+        label="Tình trạng sản phẩm"
+        name="status"
+        rules={[
+          {
+            required: true,
+            message: "Vui lòng nhập Tình trạng sản phẩm!",
+          },
+        ]}
+      >
+        <Input
+          value={status}
+          onChange={(e) => handleChange('status', e.target.value)}
+        />
+      </Form.Item>
+
+      <Form.Item
+        label=" Bảo hành"
+        name="Guarantee"
+        rules={[
+          {
+            required: true,
+            message: "Vui lòng nhập Bảo hành!",
+          },
+        ]}
+      >
+        <Input
+          value={Guarantee}
+          onChange={(e) => handleChange('Guarantee', e.target.value)}
+        />
+      </Form.Item>
+
+      <Form.Item
+        label=" Nơi sản xuất"
+        name="Origin"
+        rules={[
+          {
+            required: true,
+            message: "Vui lòng nhập Bảo hành!",
+          },
+        ]}
+      >
+        <Input
+          value={Origin}
+          onChange={(e) => handleChange('Origin', e.target.value)}
+        />
+      </Form.Item>
+
+
 
 
       {/* <Form.Item

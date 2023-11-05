@@ -25,6 +25,9 @@ const initialState = {
   brands: [],
   brand: "",
   color: "",
+  status: "",
+  Guarantee: "",
+  Origin: "",
 };
 
 const ProductCreate = () => {

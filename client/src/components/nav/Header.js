@@ -155,7 +155,7 @@ const Header = () => {
                 )}
 
                 {user && user.role === "admin" && (
-                  <NavDropdown.Item as={Link} to="/admin/dashboard" style={{ color: 'black' }}>
+                  <NavDropdown.Item as={Link} to="/admin/product" style={{ color: 'black' }}>
                     Dashboard
                   </NavDropdown.Item>
                 )}

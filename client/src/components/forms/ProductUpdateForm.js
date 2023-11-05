@@ -1,6 +1,7 @@
 import React from "react";
 import { Select } from "antd";
-
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 const { Option } = Select;
 
 const ProductUpdateForm = ({
@@ -33,8 +34,15 @@ const ProductUpdateForm = ({
     // brands,
     color,
     brand,
+    status,
+    Guarantee,
+    Origin,
   } = values;
+  const handleEditorChange = (event, editor) => {
+    const data = editor.getData();
+    handleChange('description', data);
 
+  };
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -49,14 +57,48 @@ const ProductUpdateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Mô tả cho sản phẩm</label>
+        <label>Tình trạng sản phẩm</label>
         <input
+          type="text"
+          name="status"
+          className="form-control"
+          value={status}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Bảo hành</label>
+        <input
+          type="text"
+          name="Guarantee"
+          className="form-control"
+          value={Guarantee}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Nơi sản xuất</label>
+        <input
+          type="text"
+          name="Origin"
+          className="form-control"
+          value={Origin}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Mô tả cho sản phẩm</label>
+        <textarea
           type="text"
           name="description"
           className="form-control"
           value={description}
           onChange={handleChange}
         />
+
       </div>
 
       <div className="form-group">
