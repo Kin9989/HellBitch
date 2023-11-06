@@ -121,7 +121,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
               {product && product.ratings && product.ratings.length > 0 ? (
                 showAverage(product)
               ) : (
-                <div className="text-center pt-1 pb-3">Chưa có đánh giá</div>
+                <div className="text-center pt-1 pb-1">Chưa có đánh giá</div>
               )}
 
               <Card style={{ marginBottom: '10px' }}
