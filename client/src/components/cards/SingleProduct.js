@@ -85,7 +85,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
         <Paper >
           {images && images.length ? (
             <Carousel showArrows={true} autoPlay infiniteLoop>
-              {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
+              {images && images.map((i) => <img src={i.url} key={i.public_id} style={{ height: '100%', backgroundSize: 'cover', }} />)}
             </Carousel>
           ) : (
             <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 const Footer = () => {
     return (
-        <div style={{ fontSize: '18px', fontWeight: '800', backgroundColor: '#6023AF', color: 'white' }}>
+        <div style={{ fontSize: '18px', fontWeight: '800', backgroundColor: '#312fc1', color: 'white' }}>
             <footer className="text-center text-lg-start  " >
                 <hr />
                 {/* Section: Links  */}
@@ -15,7 +15,7 @@ const Footer = () => {
                             {/* Grid column */}
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                                 {/* Content */}
-                                <h6 className="text-uppercase text-white fw-bold mb-4">
+                                <h6 className="text-uppercase  fw-bold mb-4" style={{ color: 'yellow' }}>
                                     Thiên UY AUDIO
                                 </h6>
                                 <p>
@@ -26,7 +26,7 @@ const Footer = () => {
                             {/* Grid column */}
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                 {/* Links */}
-                                <h6 className="text-uppercase fw-bold mb-4 text-white">
+                                <h6 className="text-uppercase fw-bold mb-4 " style={{ color: 'yellow' }}>
                                     Sản Phẩm
                                 </h6>
                                 <p>
@@ -44,7 +44,7 @@ const Footer = () => {
                             {/* Grid column */}
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                                 {/* Links */}
-                                <h6 className="text-uppercase fw-bold mb-4 text-white">
+                                <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'yellow' }}>
                                     Liên kết hưu ích
                                 </h6>
                                 <p>
@@ -62,7 +62,7 @@ const Footer = () => {
                             {/* Grid column */}
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 {/* Links */}
-                                <h6 className="text-uppercase fw-bold mb-4 text-white">Liên hệ</h6>
+                                <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'yellow' }}>Liên hệ</h6>
                                 <p><i className="fas fa-home me-3 " /> Lô 1 Cư xá Thanh Đa</p>
                                 <p>
                                     <i className="fas fa-envelope me-3 " />
