@@ -11,7 +11,7 @@
 .card {
 	overflow: hidden;
 	margin: 15px 5px;
-	width: 380px;
+	width: 280px;
 	height: 450px;
 	background-color: #fff;
 	/* border-radius: 15px; */
@@ -23,7 +23,7 @@
 
 .card__img {
 
-	width: 90%;
+	width: 100%;
 	transition: 0.5s;
 	display: flex;
 	justify-content: center;
@@ -31,8 +31,8 @@
 }
 
 .imgProductcardv2 {
-	width: 400px;
-	height: 300px;
+	width: 100%;
+	height: 200px;
 	object-fit: cover;
 	object-position: center;
 

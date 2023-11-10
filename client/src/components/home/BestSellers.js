@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { getProducts, getProductsCount } from "../../functions/product";
 import ProductCardv2 from "../cards/ProductCardv2/ProductCardv2";
 import LoadingCard from "../cards/LoadingCard";
-import { Pagination } from "antd";
+// import { Pagination } from "antd";
 
-// import Pagination from '@mui/material/Pagination';
-// import Stack from '@mui/material/Stack';
-
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+const ITEMS_PER_PAGE = 4;
 const BestSellers = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -38,7 +38,7 @@ const BestSellers = () => {
         ) : (
           <div className="row">
             {products.map((product) => (
-              <div key={product._id} className="col-md-4">
+              <div key={product._id} className="col-md-3">
                 <ProductCardv2 product={product} />
               </div>
             ))}
@@ -50,10 +50,9 @@ const BestSellers = () => {
         <nav className="col-md-4 offset-md-4 d-flex justify-content-center pt-5 p-3">
           {/* <Pagination count={Math.ceil(productsCount / 3)} page={page} variant="outlined" color="secondary" onChange={(value) => setPage(value)} /> */}
           <Pagination
-            current={page}
-            total={(productsCount / 3) * 10}
-            onChange={(value) => setPage(value)}
-            simple
+            count={Math.ceil(productsCount / ITEMS_PER_PAGE)}
+            page={page}
+            onChange={(event, value) => setPage(value)}
           />
         </nav>
       </div>

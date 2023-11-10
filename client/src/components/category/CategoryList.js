@@ -68,7 +68,7 @@ const CategoryList = () => {
       <Slider {...settings} autoplay pauseOnFocus className="d-flex " style={{ margin: '30px', color: 'black' }}>
         {categories.map((c) => (
           <div className="d-flex justify-content-center mb-2" style={{ width: '100%' }} key={c._id}>
-            <Card sx={{}} style={{ width: '300px' , margin:'30px' }}>
+            <Card sx={{}} style={{ width: '300px', margin: '30px' }}>
               <CardActionArea>
                 {/* <CardMedia
                   component="img"
