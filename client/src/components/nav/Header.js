@@ -75,7 +75,7 @@ const Header = () => {
     window.location.reload();
   }
   return (
-    <div style={{ fontSize: '18px', fontWeight: '800', backgroundColor: 'yellow' }}>
+    <div style={{ fontSize: '18px', fontWeight: '800', }}>
       <Navbar menuVariant="dark" className="" expand="lg" >
         <Container style={{ fontSize: '18px', fontWeight: '800', }}>
           <Navbar.Brand as={Link} to="/">
