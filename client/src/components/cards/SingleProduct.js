@@ -91,7 +91,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
             <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>
           )}
         </Paper>
-        <Paper style={{ height: '100%', marginTop: '10px' }}>
+        <Paper style={{ marginTop: '10px' }}>
           <Tabs type="card" >
             <TabPane tab="Thông tin chi tiết" key="1">
               Liên hệ ngay: ................
