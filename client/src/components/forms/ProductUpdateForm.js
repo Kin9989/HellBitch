@@ -40,7 +40,7 @@ const ProductUpdateForm = ({
   } = values;
   const handleEditorChange = (event, editor) => {
     const data = editor.getData();
-    handleChange('description', data);
+    handleChange({ target: { name: 'description', value: data } });
 
   };
   return (
@@ -91,12 +91,19 @@ const ProductUpdateForm = ({
 
       <div className="form-group">
         <label>Mô tả cho sản phẩm</label>
-        <textarea
+        {/* <textarea
           type="text"
           name="description"
           className="form-control"
           value={description}
           onChange={handleChange}
+        /> */}
+
+        <CKEditor
+          editor={ClassicEditor}
+          // // config={editorConfiguration}
+          data={description}
+          onChange={handleEditorChange}
         />
 
       </div>
