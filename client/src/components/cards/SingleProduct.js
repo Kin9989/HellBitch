@@ -91,7 +91,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
             <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>
           )}
         </Paper>
-
+        {/* absolutes */}
       </div>
 
       <Paper className="col-md-5" elevation={3} style={{ marginBottom: '20px' }}>
