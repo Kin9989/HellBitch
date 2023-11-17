@@ -1,9 +1,7 @@
 import React from "react";
 import { Button, Form, Input, Select } from 'antd';
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import CKEditor from "@ckeditor/ckeditor5-react";
-import DecoupledEditor from "@ckeditor/ckeditor5-build-decoupled-document";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 // import UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/uploadadapter';
 
 const { Option } = Select;
@@ -169,19 +167,7 @@ const ProductCreateForm = ({
         ]}
       >
         <CKEditor
-          editor={DecoupledEditor}
-          onInit={(editor) => {
-            console.log("Editor is ready to use!", editor);
-
-            // Insert the toolbar before the editable area.
-            editor.ui
-              .getEditableElement()
-              .parentElement.insertBefore(
-                editor.ui.view.toolbar.element,
-                editor.ui.getEditableElement()
-              );
-          }}
-          // editor={ClassicEditor}
+          editor={ClassicEditor}
           // config={editorConfiguration}
           data={description}
           onChange={handleEditorChange}

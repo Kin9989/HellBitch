@@ -1,9 +1,7 @@
 import React from "react";
 import { Button, Form, Input } from 'antd';
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import CKEditor from "@ckeditor/ckeditor5-react";
-import DecoupledEditor from "@ckeditor/ckeditor5-build-decoupled-document";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
 const BlogCreateForm = ({
@@ -97,21 +95,7 @@ const BlogCreateForm = ({
         ]}
       >
         <CKEditor
-
-          editor={DecoupledEditor}
-          onInit={(editor) => {
-            console.log("Editor is ready to use!", editor);
-
-            // Insert the toolbar before the editable area.
-            editor.ui
-              .getEditableElement()
-              .parentElement.insertBefore(
-                editor.ui.view.toolbar.element,
-                editor.ui.getEditableElement()
-              );
-          }}
-
-          // editor={ClassicEditor}
+          editor={ClassicEditor}
           data={content}
           onChange={handleEditorChange}
         />

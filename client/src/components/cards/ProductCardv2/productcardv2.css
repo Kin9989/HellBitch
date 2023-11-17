@@ -10,15 +10,17 @@
 
 .card {
 	overflow: hidden;
-	margin: 15px 5px;
-	width: 280px;
+	margin: 15px 15px;
+	width: 250px;
 	height: 400px;
 	background-color: #fff;
-	/* border-radius: 15px; */
+	border: non;
+	border-radius: 15px;
 	padding: 40px 20px;
 	color: black;
 	position: relative;
 	font-size: 18px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .card__img {
@@ -56,7 +58,7 @@
 }
 
 .card__title {
-	color: rgb(96, 2, 228);
+	color: rgb(36, 2, 228);
 	font-weight: 600;
 	margin-top: 8px;
 	transition: 0.5s;
