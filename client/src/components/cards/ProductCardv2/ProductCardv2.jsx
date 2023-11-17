@@ -147,7 +147,7 @@ const ProductCard = ({ product }) => {
 						)}
 					</div>
 
-					<Meta className="card_description"
+					{/* <Meta className="card_description"
 						description={
 							<Typography
 								sx={{
@@ -160,7 +160,7 @@ const ProductCard = ({ product }) => {
 								<Link to={`/product/${slug}`} style={{ color: 'white' }}> xem thêm</Link>
 							</Typography>
 						}
-					/>
+					/> */}
 					<div className="card__action BottomCard">
 						{/* <button className="button_productcardv2">Buy now</button>
 						<button className="button_productcardv2">Add cart</button> */}

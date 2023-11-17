@@ -12,7 +12,7 @@
 	overflow: hidden;
 	margin: 15px 5px;
 	width: 280px;
-	height: 450px;
+	height: 400px;
 	background-color: #fff;
 	/* border-radius: 15px; */
 	padding: 40px 20px;
@@ -56,7 +56,7 @@
 }
 
 .card__title {
-	color: #41b8e7;
+	color: rgb(96, 2, 228);
 	font-weight: 600;
 	margin-top: 8px;
 	transition: 0.5s;
@@ -77,6 +77,8 @@
 	text-align: center;
 	/* align-items: start; */
 	text-align: center;
+	font-size: 25px;
+	scale: 0.7;
 }
 
 .card:hover .card__price {
@@ -102,18 +104,19 @@
 	margin-top: -50px;
 }
 
-.card:hover .card_description {
+/* .card:hover .card_description {
 	margin-top: -30px;
 
-}
+} */
 
 /* .BottomCard {
 	display: none;
-}
+} */
 
 .card:hover .BottomCard {
 	display: block;
-} */
+	margin-top: -30px;
+}
 
 .card:hover .card__size,
 .card:hover .card__color,

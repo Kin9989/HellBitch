@@ -149,7 +149,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
 
 
       <Tabs type="card" style={{ marginTop: '10px' }}>
-        <TabPane tab="Thông tin liên hệ " key="1" style={{ padding: '10px' }}>
+        {/* <TabPane tab="Thông tin liên hệ " key="1" style={{ padding: '10px' }}>
           Liên hệ ngay:<br />
 
           <ul>
@@ -161,11 +161,20 @@ const SingleProduct = ({ product, onStarClick, star }) => {
 
 
           </ul>
-        </TabPane>
-        <TabPane tab="Mô tả SP" key="2">
+        </TabPane> */}
+        <TabPane tab="Mô tả SP" key="1">
 
-          <Paper elevation={2} style={{ overflow: 'scroll' }}>
+          <Paper elevation={2} style={{ overflow: 'scroll', padding: '30px' }}>
             <div dangerouslySetInnerHTML={{ __html: description }}></div>
+            <style>
+              {`
+                img {
+                  height: 400px;
+                  width: auto;
+
+                }
+              `}
+            </style>
           </Paper>
         </TabPane>
 
