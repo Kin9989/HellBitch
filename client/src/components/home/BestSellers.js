@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getProducts, getProductsCount } from "../../functions/product";
-import ProductCardv2 from "../cards/ProductCardv2/ProductCardv2";
+import ProductCardv3 from "../cards/ProductCardv3/ProductCardv3";
 import LoadingCard from "../cards/LoadingCard";
 // import { Pagination } from "antd";
 
@@ -36,10 +36,11 @@ const BestSellers = () => {
         {loading ? (
           <LoadingCard count={3} />
         ) : (
-          <div className="row">
+          <div className="row" style={{ marginTop: '50px' }}>
             {products.map((product) => (
               <div key={product._id} className="col-md-3">
-                <ProductCardv2 product={product} />
+
+                <ProductCardv3 product={product} />
               </div>
             ))}
           </div>

@@ -70,13 +70,7 @@ const CategoryList = () => {
           <div className="d-flex justify-content-center mb-2" style={{ width: '100%' }} key={c._id}>
             <Card sx={{}} style={{ width: '300px', margin: '30px' }}>
               <CardActionArea>
-                {/* <CardMedia
-                  component="img"
-                  height="140"
-                  // image={el.image}
-                  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9AGYk9EQ3-c4d_TAsmVmQ6jw3ffGkZpTjg&usqp=CAU"
-                  alt="green iguana"
-                /> */}
+
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div" className="d-flex justify-content-center">
                     <Link to={`/category/${c.slug}`} style={{ color: 'black' }}>{c.name}</Link>
