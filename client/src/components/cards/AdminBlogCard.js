@@ -22,7 +22,7 @@ const AdminBlogCard = ({ blog, handleRemove }) => {
       actions={[
         // <Link to={`/admin/blog/${slug}`}>
         //   <EditOutlined className="text-warning" />
-        // </Link>,
+        // </Link>,////
         <DeleteOutlined
           onClick={() => handleRemove(slug)}
           className="text-danger"
