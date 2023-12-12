@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 # Host: https://www.thienuyaudio.com
 # Sitemap: https://www.thienuyaudio.com/sitemap.xml
-/
